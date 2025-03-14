@@ -9,10 +9,10 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 WORKDIR /var/www/html
 
 # Download the template inside the container
-RUN wget --retry-connrefused --waitretry=5 --timeout=30 -t 10 -O dicet-tv.zip "https://www.free-css.com/assets/files/free-css-templates/download/page287/dicet-tv.zip" && \
-    unzip dicet-tv.zip && \
-    cp -rvf html/* . && \
-    rm -rf html dicet-tv.zip
+RUN wget --retry-connrefused --waitretry=5 --timeout=30 -t 10 -O healet.zip "https://www.free-css.com/assets/files/free-css-templates/download/page296/healet.zip" && \
+    unzip healet.zip && \
+    cp -rvf healet-html/* . && \
+    rm -rf healet-html healet.zip
 
 # Start Apache in the foreground
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
