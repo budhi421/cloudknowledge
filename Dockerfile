@@ -9,7 +9,7 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 WORKDIR /var/www/html
 
 # Download the template inside the container
-RUN wget --retry-connrefused --waitretry=5 --timeout=30 -t 10 -O dicet-tv.zip "https://www.free-css.com/assets/files/free-css-templates/download/page296/little-fashion.zip" && \
+RUN wget -O little-fashion.zip "https://www.free-css.com/assets/files/free-css-templates/download/page296/little-fashion.zip" && \
     unzip little-fashion.zip && \
     cp -rvf 2127_little_fashion/* . && \
     rm -rf 2127_little_fashion little-fashion.zip
